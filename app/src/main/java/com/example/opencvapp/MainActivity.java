@@ -57,8 +57,8 @@ public class MainActivity extends AppCompatActivity implements CameraBridgeViewB
     @Override
     public Mat onCameraFrame(CameraBridgeViewBase.CvCameraViewFrame inputFrame) {
         Mat result = new Mat();
-        //Imgproc.medianBlur(inputFrame.gray(),result,15);
-        //Imgproc.Canny(inputFrame.rgba(),result,80,200);
+        Imgproc.medianBlur(inputFrame.gray(),result,15);
+        Imgproc.Canny(inputFrame.rgba(),result,80,200);
         return result;
     }
 
